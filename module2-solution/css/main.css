@@ -1,0 +1,78 @@
+/*Styles inline é colocar o style dentro da tag lá no index.html ex: <p style="width=50px;"/>*/
+
+
+* {
+  box-sizing: border-box;
+}
+h1 {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 120%;
+}
+
+p { /* Provide a base styling and then change it in each media query */
+  border: 1px solid black;
+  background-color: #A52A2A;
+  width: 90%;
+  height: 150px;
+  margin-right: auto; /* Utilizado para centralizar dentro da div (os dois) */
+  margin-left: auto;
+  font-family: Helvetica;
+  color: white;
+    margin-bottom: 15px;
+}
+
+#p1{
+  border: 1px solid black;
+  background-color: #A52A2A;
+  width: 400px;
+  height: 150px;
+}
+
+#p2{
+  border: 1px solid black;
+  background-color: #A52A2A;
+  width: 400px;
+  height: 150px;
+}
+
+#p3{
+  border: 1px solid black;
+  background-color: #A52A2A;
+  width: 400px;
+  height: 150px;
+}
+
+/********** Large screens only **********/
+
+@media (min-width: 1200px){ /* Ao bater 1200 pixels, muda para esse style */
+#p1{
+  width: 80%;
+}
+#p2{
+  width: 80%;
+}
+#p3{
+  width: 80%;
+}
+
+body{
+  background-color: blue;
+}
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+  #p1{
+    width: 50%;
+  }
+  #p2{
+    width: 50%;
+  }
+  #p3{
+    width: 50%;
+  }
+  body{
+    background-color: green;
+  }
+}
