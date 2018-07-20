@@ -1,78 +1,190 @@
-/*Styles inline é colocar o style dentro da tag lá no index.html ex: <p style="width=50px;"/>*/
-
-
+/********** Base styles **********/
 * {
   box-sizing: border-box;
 }
 h1 {
-  margin-bottom: 15px;
+  margin-top: 30px;
+  margin-bottom: 45px;
   text-align: center;
-  font-size: 120%;
-}
-
-p { /* Provide a base styling and then change it in each media query */
-  border: 1px solid black;
-  background-color: #A52A2A;
-  width: 90%;
-  height: 150px;
-  margin-right: auto; /* Utilizado para centralizar dentro da div (os dois) */
-  margin-left: auto;
   font-family: Helvetica;
+  color: black;
+}
+
+p { /* Mobile View - Main */
+  border: 1px solid black;
+  background-color: grey;
+  height: 150px;
+  margin-top: auto;
+  margin-right: 15px;
+  margin-left: 15px;
+  padding-left: 12px;
+  padding-right: 0px;
+  font-family: Helvetica;
+  color: black;
+  overflow: auto;
+}
+
+a { /* Title Region */
+  border: 1px solid black;
+  background-color: pink;
+  padding-top: 1px;
+  padding-bottom: 2px;
+  padding-right: 0px;
+  width: 170px;
+  height: 25%;
+  position: relative;
+  float: right;
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 170%;
+  color: black;
+}
+
+#a2{
+  background-color: red;
   color: white;
-    margin-bottom: 15px;
+  clear: left;
 }
 
-#p1{
-  border: 1px solid black;
-  background-color: #A52A2A;
-  width: 400px;
-  height: 150px;
+#a3{
+  background-color: yellow;
 }
 
-#p2{
-  border: 1px solid black;
-  background-color: #A52A2A;
-  width: 400px;
-  height: 150px;
+/* Responsive Line */
+.row {
+  width: 100%;
 }
 
-#p3{
-  border: 1px solid black;
-  background-color: #A52A2A;
-  width: 400px;
-  height: 150px;
-}
+/********** Desktop View **********/
+@media (min-width: 992px) {
+  .col-desk-1, .col-desk-2, .col-desk-3, .col-desk-4, .col-desk-5, .col-desk-6, .col-desk-7, .col-desk-8, .col-desk-9, .col-desk-10, .col-desk-11, .col-desk-12 {
+    float: left; /* Asked float property */
+    border: 0px solid blue; /*Testing border*/
 
-/********** Large screens only **********/
-
-@media (min-width: 1200px){ /* Ao bater 1200 pixels, muda para esse style */
-#p1{
-  width: 80%;
-}
-#p2{
-  width: 80%;
-}
-#p3{
-  width: 80%;
-}
-
-body{
-  background-color: blue;
-}
-
-}
-
-@media (min-width: 992px) and (max-width: 1199px){
-  #p1{
+  }
+  .col-desk-1 {
+    width: 8.33%;
+  }
+  .col-desk-2 {
+    width: 16.66%;
+  }
+  .col-desk-3 {
+    width: 25%;
+  }
+  .col-desk-4 {
+    width: 33.33%;
+  }
+  .col-desk-5 {
+    width: 41.66%;
+  }
+  .col-desk-6 {
     width: 50%;
   }
-  #p2{
+  .col-desk-7 {
+    width: 58.33%;
+  }
+  .col-desk-8 {
+    width: 66.66%;
+  }
+  .col-desk-9 {
+    width: 74.99%;
+  }
+  .col-desk-10 {
+    width: 83.33%;
+  }
+  .col-desk-11 {
+    width: 91.66%;
+  }
+  .col-desk-12 {
+    width: 100%;
+  }
+}
+
+/********** Tablet View **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-tb-1, .col-tb-2, .col-tb-3, .col-tb-4, .col-tb-5, .col-tb-6, .col-tb-7, .col-tb-8, .col-tb-9, .col-tb-10, .col-tb-11, .col-tb-12 {
+    float: left;
+    border: 0px solid blue; /*Testing border*/
+  }
+  .col-tb-1 {
+    width: 8.33%;
+  }
+  .col-tb-2 {
+    width: 16.66%;
+  }
+  .col-tb-3 {
+    width: 25%;
+  }
+  .col-tb-4 {
+    width: 33.33%;
+  }
+  .col-tb-5 {
+    width: 41.66%;
+  }
+  .col-tb-6 {
     width: 50%;
   }
-  #p3{
+  .col-tb-7 {
+    width: 58.33%;
+  }
+  .col-tb-8 {
+    width: 66.66%;
+  }
+  .col-tb-9 {
+    width: 74.99%;
+  }
+  .col-tb-10 {
+    width: 83.33%;
+  }
+  .col-tb-11 {
+    width: 91.66%;
+  }
+  .col-tb-12 {
+    width: 100%;
+
+  }
+}
+
+/********** Mobile View **********/
+@media (min-width: 0px) and (max-width: 767px) {
+  .col-mb-1, .col-mb-2, .col-mb-3, .col-mb-4, .col-mb-5, .col-mb-6, .col-mb-7, .col-mb-8, .col-mb-9, .col-mb-10, .col-mb-11, .col-mb-12 {
+    float: left;
+    border: 0px solid blue; /*Testing border*/
+  }
+  .col-mb-1 {
+    width: 8.33%;
+  }
+  .col-mb-2 {
+    width: 16.66%;
+  }
+  .col-mb-3 {
+    width: 25%;
+  }
+  .col-mb-4 {
+    width: 33.33%;
+  }
+  .col-mb-5 {
+    width: 41.66%;
+  }
+  .col-mb-6 {
     width: 50%;
   }
-  body{
-    background-color: green;
+  .col-mb-7 {
+    width: 58.33%;
+  }
+  .col-mb-8 {
+    width: 66.66%;
+  }
+  .col-mb-9 {
+    width: 74.99%;
+  }
+  .col-mb-10 {
+    width: 83.33%;
+  }
+  .col-mb-11 {
+    width: 91.66%;
+  }
+  .col-mb-12 {
+    width: 100%;
   }
 }
